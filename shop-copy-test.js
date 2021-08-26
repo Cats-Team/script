@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         复制授权
 // @namespace    none
-// @version      1.0
+// @version      1.1
 // @description  复制授权
 // @author       杏灵
 // @match        *://*/*
