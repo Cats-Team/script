@@ -58,6 +58,7 @@ jobs:
         uses: ad-m/github-push-action@v0.5.0
         with:
           github_token: ${{ secrets.TOKEN }}
+          branch: ${{ github.ref }}
 
       - uses: actions/checkout@main  
       - name: Git push assets to github & coding
