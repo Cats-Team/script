@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         知乎增强
-// @version      1.7.3
+// @version      1.7.4
 // @author       X.I.U
 // @description  移除登录弹窗、默认收起回答、一键收起回答、收起当前回答/评论（点击两侧空白处）、快捷回到顶部（右键两侧空白处）、屏蔽用户 (发布的内容)、屏蔽关键词（标题/评论）、屏蔽指定类别（视频/文章等）、屏蔽盐选内容、净化标题消息、展开问题描述、置顶显示时间、完整问题时间、区分问题文章、直达问题按钮、默认高清原图、默认站外直链
 // @match        *://www.zhihu.com/*
@@ -1161,11 +1161,34 @@ function removeLogin() {
 // 净化标题消息
 function cleanTitles() {
     if (!menu_value('menu_cleanTitles')) return
-    Object.defineProperty(document, 'title', {
-        set: function(value) {
-            //console.log(value);
+
+    // 方案一
+    const elTitle = document.head.querySelector('title');
+    const original = elTitle.textContent;
+    const observer = new MutationObserver(function() {
+        if (elTitle.textContent != original) { // 避免重复执行
+            elTitle.textContent = original;
         }
     });
+    observer.observe(elTitle, { childList: true });
+
+    // 方案二
+    // if (Reflect.getOwnPropertyDescriptor(document, 'title')) {
+    //     const elTitle = document.head.querySelector('title');
+    //     const original = elTitle.textContent;
+    //     const observer = new MutationObserver(function() {
+    //         if (elTitle.textContent != original) { // 避免重复执行
+    //             elTitle.textContent = original;
+    //         }
+    //     });
+    //     observer.observe(elTitle, { childList: true });
+    // } else {
+    //     const title = document.title;
+    //     Reflect.defineProperty(document, 'title', {
+    //         set: () => {},
+    //         get: () => title,
+    //     });
+    // }
 }
 
 
