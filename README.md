@@ -14,6 +14,7 @@ Some script 一些脚本
 | 通用阅读器 | [链接地址](https://hacamer.coding.net/p/repos/d/script/git/raw/main/yuedu-all.js) |
 | 知乎增强 | [链接地址](https://hacamer.coding.net/p/repos/d/script/git/raw/main/zhihu-pro.js) |
 | CSDN净化 | [链接地址](https://hacamer.coding.net/p/repos/d/script/git/raw/main/csdn-clean.js) |
+| CSDN-PRO | [链接地址](https://hacamer.coding.net/p/repos/d/script/git/raw/main/csdn-pro.js) |
 | 阅读全文 | [链接地址](https://hacamer.coding.net/p/repos/d/script/git/raw/main/read-more.js) |
 | 百度系去广告 | [链接地址](https://hacamer.coding.net/p/repos/d/script/git/raw/main/rm-baiduad.js) |
 
