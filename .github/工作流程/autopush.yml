@@ -17,38 +17,44 @@ jobs:
         uses: carlosperate/download-file-action@v1.0.0
         with: 
           file-url: https://greasyfork.org/scripts/414010-%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87-%E8%87%AA%E5%8A%A8%E5%B1%95%E5%BC%80%E5%85%A8%E6%96%87-%E8%87%AA%E5%8A%A8%E7%A7%BB%E9%99%A4%E4%B8%87%E6%81%B6%E5%BC%B9%E6%A1%86/code/%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87%E3%80%81%E8%87%AA%E5%8A%A8%E5%B1%95%E5%BC%80%E5%85%A8%E6%96%87%E3%80%81%E8%87%AA%E5%8A%A8%E7%A7%BB%E9%99%A4%E4%B8%87%E6%81%B6%E5%BC%B9%E6%A1%86.user.js
-          file-name: read-more.js
+          file-name: read-more.user.js
 
       - name: CSDN净化
         uses: carlosperate/download-file-action@v1.0.0
         with: 
           file-url: https://greasyfork.org/scripts/372452-csdn%E8%87%AA%E5%8A%A8%E5%B1%95%E5%BC%80-%E5%8E%BB%E5%B9%BF%E5%91%8A-%E5%87%80%E5%8C%96%E5%89%AA%E8%B4%B4%E6%9D%BF-%E5%85%8D%E7%99%BB%E9%99%86/code/CSDN%E8%87%AA%E5%8A%A8%E5%B1%95%E5%BC%80+%E5%8E%BB%E5%B9%BF%E5%91%8A+%E5%87%80%E5%8C%96%E5%89%AA%E8%B4%B4%E6%9D%BF+%E5%85%8D%E7%99%BB%E9%99%86.user.js
-          file-name: csdn-clean.js
+          file-name: csdn-clean.user.js
 
       - name: CSDN-Pro
         uses: carlosperate/download-file-action@v1.0.0
         with: 
           file-url: https://greasyfork.org/scripts/378351-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E4%BA%BA%E6%80%A7%E5%8C%96%E8%84%9A%E6%9C%AC%E4%BC%98%E5%8C%96-%E4%B8%8D%E7%94%A8%E5%86%8D%E7%99%BB%E5%BD%95%E4%BA%86-%E8%AE%A9%E4%BD%A0%E4%BD%93%E9%AA%8C%E4%BB%A4%E4%BA%BA%E6%83%8A%E5%96%9C%E7%9A%84%E5%B4%AD%E6%96%B0csdn/code/%F0%9F%94%A5%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%F0%9F%94%A5%20CSDN%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4%E3%80%81%E4%BA%BA%E6%80%A7%E5%8C%96%E8%84%9A%E6%9C%AC%E4%BC%98%E5%8C%96%EF%BC%9A%F0%9F%86%95%20%E4%B8%8D%E7%94%A8%E5%86%8D%E7%99%BB%E5%BD%95%E4%BA%86%EF%BC%81%E8%AE%A9%E4%BD%A0%E4%BD%93%E9%AA%8C%E4%BB%A4%E4%BA%BA%E6%83%8A%E5%96%9C%E7%9A%84%E5%B4%AD%E6%96%B0CSDN%E3%80%82.user.js
-          file-name: csdn-pro.js
+          file-name: csdn-pro.user.js
 
 
       - name: 知乎增强
         uses: carlosperate/download-file-action@v1.0.0
         with: 
           file-url: https://greasyfork.org/scripts/419081-%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA/code/%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA.user.js
-          file-name: zhihu-pro.js
+          file-name: zhihu-pro.user.js
 
       - name: 百度系去广告
         uses: carlosperate/download-file-action@v1.0.0
         with: 
           file-url: https://greasyfork.org/scripts/394099-%E7%99%BE%E5%BA%A6%E7%B3%BB%E7%BD%91%E7%AB%99%E5%8E%BB%E5%B9%BF%E5%91%8A/code/%E7%99%BE%E5%BA%A6%E7%B3%BB%E7%BD%91%E7%AB%99%E5%8E%BB%E5%B9%BF%E5%91%8A.user.js
-          file-name: rm-baiduad.js
+          file-name: rm-baiduad.user.js
 
       - name: 通用阅读器
         uses: carlosperate/download-file-action@v1.0.0
         with: 
           file-url: https://greasyfork.org/scripts/377230-%E9%80%9A%E7%94%A8%E9%98%85%E8%AF%BB%E5%99%A8/code/%E9%80%9A%E7%94%A8%E9%98%85%E8%AF%BB%E5%99%A8.user.js
-          file-name: yuedu-all.js
+          file-name: yuedu-all.user.js
+
+      - name: 谷歌翻译
+        uses: carlosperate/download-file-action@v1.0.0
+        with: 
+          file-url: https://greasyfork.org/scripts/424966-网页翻译-翻译为中文/code/网页翻译——翻译为中文.user.js
+          file-name: google-fy.user.js
 
       - name: Commit Changes
         run: |
