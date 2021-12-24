@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         复制授权
 // @namespace    none
-// @version      1.0
+// @version      1.4
 // @description  ⚠️前排提示： 该脚本与复制限制解除类脚本不兼容！若需要该脚本请卸载解除限制类的脚本，该类脚本目前主要包括网页复制限制解除和复制限制解除(本地版)。脚本作用： 专防网页后台复制各种口令。脚本起效后网页右侧会出现半透明小红点：红色状态表示拦截所有复制行为，点击红点变成绿色时临时放行所有复制，再点击变回红色状态。
 // @author       杏梢
 // @match        *://*/*
@@ -28,10 +28,15 @@ shows = 1, /* 是否显示小红点开关 */
  if(window[key]){return;}
  try {
   window[key] = true;
-  let red = true;
-  function pc(e){if(red && !(needc && confirm('网页正在尝试复制，是否允许？'))){e.preventDefault();e.stopPropagation();}}
-  document.addEventListener('copy',(e)=>pc(e),{'passive':false, 'capture':true});
-  Array.from(document.getElementsByTagName('iframe')).forEach((i)=>i.contentDocument.addEventListener('copy',(e)=>pc(e),{'passive':false, 'capture':true}));
+  let red = true,
+  lastCopyTime = 0;
+  function copyHandle(e){
+   function stopCopy(){e.preventDefault();e.stopImmediatePropagation();lastCopyTime = Date.now();}
+   if(Date.now() - lastCopyTime < 100){stopCopy();return;}
+   if(red && !(needc && confirm('网页正在尝试复制，是否允许？'))){stopCopy();}
+  }
+  document.addEventListener('copy',(e)=>copyHandle(e),{'passive':false, 'capture':true});
+  Array.from(document.getElementsByTagName('iframe')).forEach((i)=>i.contentDocument.addEventListener('copy',(e)=>copyHandle(e),{'passive':false, 'capture':true}));
   if(shows){
    const sw = document.createElement("div");
    sw.style = 'position:fixed!important;bottom:45%;right:10px;z-index:999999;width:14px;height:14px;opacity:0.4;border-radius:7px;background:red';
