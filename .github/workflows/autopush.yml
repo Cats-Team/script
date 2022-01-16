@@ -12,13 +12,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2.0.0
-            
-      - name: 阅读全文
-        uses: carlosperate/download-file-action@v1.0.0
-        with: 
-          file-url: https://greasyfork.org/scripts/414010-%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87-%E8%87%AA%E5%8A%A8%E5%B1%95%E5%BC%80%E5%85%A8%E6%96%87-%E8%87%AA%E5%8A%A8%E7%A7%BB%E9%99%A4%E4%B8%87%E6%81%B6%E5%BC%B9%E6%A1%86/code/%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87%E3%80%81%E8%87%AA%E5%8A%A8%E5%B1%95%E5%BC%80%E5%85%A8%E6%96%87%E3%80%81%E8%87%AA%E5%8A%A8%E7%A7%BB%E9%99%A4%E4%B8%87%E6%81%B6%E5%BC%B9%E6%A1%86.user.js
-          file-name: read-more.user.js
-
       - name: CSDN净化
         uses: carlosperate/download-file-action@v1.0.0
         with: 
